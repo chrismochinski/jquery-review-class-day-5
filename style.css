@@ -7,3 +7,27 @@
 .warm {
     background-color: tomato
 }
+
+.clear-background {
+    background-color: white;
+}
+
+/**
+*
+* GO TO W3 SCHOOLS, RIP OF A STYLE
+* COPY AND PASTE IT - IT IS MINIMAL
+* THEN ADD IT
+*
+*/
+
+table, th, td {
+    border: 1px dotted black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgb(241, 139, 199);
+}
+
+th {
+    font-size: 30px;
+}

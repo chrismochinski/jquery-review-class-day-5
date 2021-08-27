@@ -5,6 +5,15 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('DOM Ready');
 $('#submit-button').on('click', appendCityToTable); 
+$('#city-table-body').on('click', '.clear-button', clearBackgroundColor)
+}
+
+function clearBackgroundColor() {
+    // what is $(this)
+    console.log($(this).parent().parent());
+    let tableRow = $(this).parent().parent(); //THE jQuery is being sent to the below lines!
+    tableRow.removeClass(); 
+    tableRow.removeClass();
 }
     function appendCityToTable(){
         let cityName = $('#city-name').val();//'jquery, go find our input field with the ID city-name' (can be string or number or array)
@@ -23,8 +32,13 @@ $('#submit-button').on('click', appendCityToTable);
         $('#city-table-body').append(`
             <tr class="${rowClass}">
                 <td>${cityName}</td><td>${temperature}°</td>
+                <td><button class="clear-button">Clear Background</button></td>
             </tr>`)
+
     $('#city-name').val('');
     $('#city-temperature').val('');
     }
 
+// .css adds property stuff (JQ)
+//  .addClass adds class (JQ)
+// .removeClass removes class (maybe in the parens??)
